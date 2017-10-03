@@ -13,6 +13,8 @@ $(document).ready(function() {
   })
 
   $(".option").click(function(){
+    $(".character-type").removeClass("highlight");
+    $(this).parent().addClass("highlight");
 
   });
 

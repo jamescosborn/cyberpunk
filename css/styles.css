@@ -41,6 +41,14 @@ body {
   border-color: var(--col-1));
 }
 
+.character-type {
+  padding: 14px;
+}
+
+.highlight {
+  background-color: var(--col-bg2);
+}
+
 /*Character creation image*/
 .default {
   display: block;
