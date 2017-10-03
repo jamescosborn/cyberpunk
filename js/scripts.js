@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  $("button[needsflag]").hide();
+
   var fadeSwap = function(oldClass, newClass, fadeTime) {
     $(oldClass).fadeOut(fadeTime);
     $(".popover").fadeOut(fadeTime);
@@ -10,6 +12,11 @@ $(document).ready(function() {
 
   $(".player-choice").click(function() {
     var targetClass = $(this).val();
+    var flag = $(this).attr("addflag");
+    if (flag) {
+      $("button[needsflag='" + flag + "']").show();
+      $("button[canthaveflag='" + flag + "']").hide();
+    }
     fadeSwap(".scene", targetClass, 2000);
   })
 
@@ -19,14 +26,16 @@ $(document).ready(function() {
 
   });
 
-  $("#intro-quote").fadeIn(1200);
+  var introfade = 200;
+
+  $("#intro-quote").fadeIn(introfade*2);
 
   setTimeout(function() {
-    $("#intro-quote").fadeOut(2000);
+    $("#intro-quote").fadeOut(introfade*2);
     setTimeout(function() {
-      $("#scene-character-creator").fadeIn(2000);
-    }, 2000);
-  }, 4000);
+      $("#scene-character-creator").fadeIn(introfade*2);
+    }, introfade*2);
+  }, introfade*4);
 
   $(function () {
   $('[data-toggle="popover"]').popover()
