@@ -54,7 +54,7 @@
     <div class="scene" id="scene-A">
       <h1>Scene A</h1>
       <button type="button" class="player-choice btn-primary btn-lg" value="#scene-B">Jump to scene B</button>
-      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-C">Jump to scene C</button>
+      <button type="button" addflag="has-sandwich"  class="player-choice btn-primary btn-lg" value="#scene-C">Jump to scene C</button>
       <button type="button" class="btn-primary btn-lg" ata-container="body" data-toggle="popover" data-placement="right" data-content="THING1">Stay at home</button>
     </div>
     <!--Scene B  -->
@@ -72,8 +72,8 @@
     <!--Scene D  -->
     <div class="scene" id="scene-D">
       <h1>Scene D</h1>
-      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-E">Jump to scene E</button>
-      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-F">Jump to scene F</button>
+      <button type="button" needsflag="has-sandwich" class="player-choice btn-primary btn-lg" value="#scene-E">Jump to scene E</button>
+      <button type="button" canthaveflag="has-sandwich" class="player-choice btn-primary btn-lg" value="#scene-F">Jump to scene F</button>
     </div>
     <!--Scene E  -->
     <div class="scene" id="scene-E">
