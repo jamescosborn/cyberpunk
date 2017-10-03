@@ -12,6 +12,7 @@
   </head>
   <body>
     <div class="container">
+      <div class="scene-char-creator">
       <img class="default" src="img/punk.jpg">
       </br>
       <blockquote class="blockquote">
@@ -24,24 +25,83 @@
       <form>
         <div class="row">
           <div class="col-sm-6">
-        <div id="name">
-          Enter name:<br>
-          <input class="form-control" type="text" name="username"><br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <button type="button" class="btn btn-primary btn-lg btn-block .option">Option A</button>
+          </div>
+          <div class="col-sm-6">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <button type="button" class="btn btn-primary btn-lg btn-block .option">Option B</button>
+          </div>
         </div>
-        </div>
-        <br>
-        <div class="col-sm-6">
-        <div id="archetype">
-          <select>
-            <option value="female">Female </option>
-            <option value="male">Male</option>
-          </select>
-        </div>
-      </div>
+
+        <div id="name" class="text-center">
+          <span class="center">Enter name:<br>
+          <input class="form-control" type="text" name="username"><br></span>
+
+      </br>
       </div>
       </br>
-        <button type="button" class="btn btn-primary btn-lg btn-block .option">Block level button</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block .option">Submit</button>
       </form>
     </div>
+    <!-- Hidden divs -->
+    <!--Scene A  -->
+  </br>
+    <div class="scene-A">
+      <h1>Scene A</h1>
+      <button type="button" class="player-choice btn-primary btn-lg">Jump to scene B</button>
+      <button type="button" class="player-choice btn-primary btn-lg">Jump to scene C</button>
+    </div>
+    <!--Scene B  -->
+    <div class="scene-B">
+      <h1>Scene B</h1>
+      <button type="button" class="player-choice btn-primary btn-lg">Jump to scene D</button>
+      <button type="button" class="player-choice btn-primary btn-lg">Jump to scene D</button>
+    </div>
+    <!--Scene C  -->
+    <div class="scene-C">
+      <h1>Scene C</h1>
+      <button type="button" class="player-choice btn-primary btn-lg">Jump to scene D</button>
+      <button type="button" class="player-choice btn-primary btn-lg">Jump to scene D</button>
+    </div>
+    <!--Scene D  -->
+    <div class="scene-D">
+      <h1>Scene D</h1>
+      <button type="button" class="player-choice btn-primary btn-lg">Jump to scene E</button>
+      <button type="button" class="player-choice btn-primary btn-lg">Jump to scene F</button>
+    </div>
+    <!--Scene E  -->
+    <div class="scene-E">
+      <h1>Scene E</h1>
+      <button type="button" class="player-choice btn-primary btn-lg">Jump to scene G</button>
+      <button type="button" class="player-choice btn-primary btn-lg">Jump to scene G</button>
+    </div>
+    <!--Scene F  -->
+    <div class="scene-F">
+      <h1>Scene F</h1>
+      <button type="button" class="player-choice btn-primary btn-lg">Jump to scene G</button>
+      <button type="button" class="player-choice btn-primary btn-lg">Jump to scene G</button>
+    </div>
+    <!--Scene G  -->
+    <div class="scene-G">
+      <h1>Scene G</h1>
+      <button type="button" class="player-choice btn-primary btn-lg">Jump to ending 1</button>
+      <button type="button" class="player-choice btn-primary btn-lg">Jump to ending 2</button>
+    </div>
+    <!--Ending 1  -->
+    <div class="ending-A">
+      <h1>Ending 1</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <button type="button" class="player-choice btn-primary btn-lg">Large button</button>
+      <button type="button" class="player-choice btn-primary btn-lg">Large button</button>
+    </div>
+    <!--Ending 2  -->
+    <div class="ending-B">
+      <h1>Ending 2</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <button type="button" class="player-choice btn-primary btn-lg">Large button</button>
+      <button type="button" class="player-choice btn-primary btn-lg">Large button</button>
+    </div>
+  </div>
   </body>
 </html>
