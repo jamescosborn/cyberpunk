@@ -7,8 +7,8 @@ $(document).ready(function() {
     }, fadeTime);
   }
 
-  $(".option-button").click(function() {
+  $(".player-choice").click(function() {
     var targetClass = $(this).val();
-    fadeSwap(".node", targetClass, 2000);
+    fadeSwap(".scene", targetClass, 2000);
   })
 });
