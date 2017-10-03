@@ -19,6 +19,9 @@ body {
 	background: var(--col-bg2);
 }
 
+.hidden {
+  display: none;
+}
 
 .form-control:focus {
   color: var(--col-white);

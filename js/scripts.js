@@ -19,7 +19,14 @@ $(document).ready(function() {
 
   });
 
-  $("#scene-character-creator").fadeIn(1200);
+  $("#intro-quote").fadeIn(1200);
+
+  setTimeout(function() {
+    $("#intro-quote").fadeOut(2000);
+    setTimeout(function() {
+      $("#scene-character-creator").fadeIn(2000);
+    }, 2000);
+  }, 4000);
 
   $(function () {
   $('[data-toggle="popover"]').popover()
