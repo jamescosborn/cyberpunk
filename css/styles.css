@@ -23,6 +23,10 @@ body {
   display: none;
 }
 
+#form-error {
+  color: rgb(217, 8, 39);
+}
+
 .form-control:focus {
   color: var(--col-white);
   background: var(--col-1);
@@ -41,8 +45,25 @@ body {
   display: none;
   border-style: solid;
   padding: 50px;
+  min-height: 950px;
+  margin-top: 70px;
   border-color: var(--col-1));
 }
+
+.textbox {
+  border-top: 1px solid;
+  min-height: 850px;
+  margin-top: 25px;
+  padding-top: 25px;
+}
+
+.player-choice {
+  bottom: 10px;
+}
+
+/*#push-up {
+  margin-top: 500px;
+}*/
 
 .character-type {
   padding: 14px;
@@ -62,4 +83,10 @@ body {
 
 .blockquote {
   border-left-color: var(--col-1);
+}
+
+.popover {
+  background-color: var(--col-bg2);
+  border-color: var(--col-bg2)
+
 }
