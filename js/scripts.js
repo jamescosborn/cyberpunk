@@ -11,4 +11,6 @@ $(document).ready(function() {
     var targetClass = $(this).val();
     fadeSwap(".scene", targetClass, 2000);
   })
+
+  $("#scene-character-creator").fadeIn(1200);
 });
