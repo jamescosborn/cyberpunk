@@ -13,6 +13,12 @@ $(document).ready(function() {
     fadeSwap(".scene", targetClass, 2000);
   })
 
+  $(".option").click(function(){
+    $(".character-type").removeClass("highlight");
+    $(this).parent().addClass("highlight");
+
+  });
+
   $("#scene-character-creator").fadeIn(1200);
 
   $(function () {

@@ -24,9 +24,29 @@ body {
   color: var(--col-white);
   background: var(--col-1);
 }
+
+.btn {
+  background-color: var(--col-2);
+  border-color: var(--col-2);
+}
+
+.btn:focus, .btn:hover {
+  background-color: var(--col-1);
+}
 /*Hide scenes by default*/
 .scene {
   display: none;
+  border-style: solid;
+  padding: 50px;
+  border-color: var(--col-1));
+}
+
+.character-type {
+  padding: 14px;
+}
+
+.highlight {
+  background-color: var(--col-bg2);
 }
 
 /*Character creation image*/
@@ -35,4 +55,8 @@ body {
   margin: auto;
   height: auto;
   width: 100%;
+}
+
+.blockquote {
+  border-left-color: var(--col-1);
 }
