@@ -10,20 +10,39 @@ $(document).ready(function() {
     }, fadeTime);
   }
 
-  $(".player-choice").click(function() {
-    var targetClass = $(this).val();
-    var flag = $(this).attr("addflag");
-    if (flag) {
+  var removeFlag = function(flag) {
+    $("button[needsflag='" + flag + "']").hide();
+    $("button[canthaveflag='" + flag + "']").show();
+  }
+
+  var addFlag = function(flag) {
       $("button[needsflag='" + flag + "']").show();
       $("button[canthaveflag='" + flag + "']").hide();
+  }
+
+  var updateFlags = function(self) {
+    var flagToAdd = self.attr("addflag");
+    if (flagToAdd) {
+      addFlag(flagToAdd);
     }
+    var flagToRemove = self.attr("removeflag");
+    if (flagToRemove) {
+      removeFlag(flagToRemove)
+    }
+  }
+
+  $(".player-choice").click(function() {
+    var self = $(this)
+    var targetClass = self.val();
+    updateFlags(self);
     fadeSwap(".scene", targetClass, 2000);
   })
 
   $(".option").click(function(){
     $(".character-type").removeClass("highlight");
-    $(this).parent().addClass("highlight");
-
+    var self = $(this);
+    self.parent().addClass("highlight");
+    updateFlags(self);
   });
 
   var introfade = 200;
