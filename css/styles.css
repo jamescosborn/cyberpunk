@@ -1,10 +1,38 @@
+/*Main Color Control*/
+:root {
+  --col-white: #fff;
+  --col-1: rgb(182, 117, 240);
+  --col-2: rgb(57, 85, 230);
+  --col-bg: rgb(51, 47, 62);
+  --col-bg2: rgb(74, 67, 93);
+}
+
+/*Text Color Override*/
+body {
+  color: var(--col-1);
+  background-color: var(--col-bg);
+}
+
+/*Override Bootstrap form colors*/
+.form-control {
+  color: var(--col-1);
+	background: var(--col-bg2);
+}
+
+
+.form-control:focus {
+  color: var(--col-white);
+  background: var(--col-1);
+}
+/*Hide scenes by default*/
+.scene {
+  display: none;
+}
+
+/*Character creation image*/
 .default {
   display: block;
   margin: auto;
-  height: 50%;
-  width: auto;
-}
-
-.center {
-  text: center;
+  height: auto;
+  width: 100%;
 }
