@@ -84,9 +84,24 @@ body {
 .blockquote {
   border-left-color: var(--col-1);
 }
-
 .popover {
   background-color: var(--col-bg2);
   border-color: var(--col-bg2)
-
 }
+@font-face {
+    font-family: "My Custom Font";
+    src: url(text2.ttf) format("truetype");
+}
+.customfont {
+    font-family: "My Custom Font";
+  }
+  @font-face {
+      font-family: "My Custom Font two";
+      src: url(text8.ttf) format("truetype");
+  }
+  .customfont2 {
+      font-family: "My Custom Font two";
+      outline-color: white;
+      font-size: 150%;
+      font-weight: bold;
+    }
