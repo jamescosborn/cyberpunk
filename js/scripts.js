@@ -3,6 +3,7 @@ $(document).ready(function() {
   var flags = [];
 
   $("button[needsflag]").hide();
+  $("button[needsflags]").hide();
 
   var fadeSwap = function(oldClass, newClass, fadeTime) {
     $(oldClass).fadeOut(fadeTime);
@@ -21,12 +22,52 @@ $(document).ready(function() {
     }
     $("button[needsflag='" + flag + "']").hide();
     $("button[canthaveflag='" + flag + "']").show();
+    $("button").each(function() {
+      var self = $(this);
+      var cantHaveFlags = self.attr("canthaveflags");
+      var needsFlags = self.attr("needsflags");
+      if (cantHaveFlags) {
+        cantHaveFlags.split(" ").forEach(function(currentFlag) {
+          if (flag === currentFlag) {
+            self.show();
+          }
+        });
+      }
+      if (needsFlags) {
+        needsFlags.split(" ").forEach(function(currentFlag) {
+          if (flag === currentFlag) {
+            self.hide();
+          }
+        });
+      }
+    });
   }
 
   var addFlag = function(flag) {
     flags.push(flag);
     $("button[needsflag='" + flag + "']").show();
     $("button[canthaveflag='" + flag + "']").hide();
+
+    $("button").each(function() {
+      var self = $(this);
+      var cantHaveFlags = self.attr("canthaveflags");
+      var needsFlags = self.attr("needsflags");
+      if (cantHaveFlags) {
+        cantHaveFlags.split(" ").forEach(function(currentFlag) {
+          if (flag === currentFlag) {
+            self.hide();
+          }
+        });
+      }
+      if (needsFlags) {
+        needsFlags.split(" ").forEach(function(currentFlag) {
+          console.log(currentFlag, flag);
+          if (flag === currentFlag) {
+            self.show();
+          }
+        });
+      }
+    });
   }
 
   var updateFlags = function(self) {
@@ -41,11 +82,15 @@ $(document).ready(function() {
   }
 
   var canProgress = function() {
-    if ($("#username").val().length <= 0) {
-      $("#form-error").text("USER_ERROR[ID:32]='NAME INVALID'")
+    var nameLength = $("#username").val().replace(/\s/g, '').length
+    if (nameLength < 1) {
+      $("#form-error").text("USER_ERROR[ID:32]='NAME TOO SHORT'");
+      return false
+    } else if (nameLength > 40) {
+      $("#form-error").text("USER_ERROR[ID:32]='NAME TOO LONG'");
       return false
     } else if ( !(flags.includes("flag-order") || flags.includes("flag-chaos")) ) {
-      $("#form-error").text("USER_ERROR[ID:41]='PATH INVALID'")
+      $("#form-error").text("USER_ERROR[ID:41]='PATH INVALID'");
       return false
     }
     return true
@@ -78,7 +123,7 @@ $(document).ready(function() {
   });
 
 
-  var introfade = 200;
+  var introfade = 150;
 
   $("#intro-quote").fadeIn(introfade*2);
 
