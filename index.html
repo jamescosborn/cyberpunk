@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="container">
-      <blockquote class="blockquote hidden" id="intro-quote">
+      <blockquote class="blockquote hidden quote" id="intro-quote">
         <p class="mb-0">There never can be a man so lost as one who is lost in the vast and intricate corridors of his own lonely mind, where none may reach and none may save.</p>
         <footer class="blockquote-footer">Isaac Asimov (1950) <cite title="Source Title">Pebble in the Sky</cite></footer>
       </blockquote>
@@ -29,17 +29,21 @@
       <form id="form-character">
         <div class="row">
           <div class="character-type col-sm-6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="character-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
+            </div>
             <button type="button" addflag="flag-order" removeflag="flag-chaos" class="btn btn-primary btn-lg btn-block option">Option A</button>
           </div>
           <div class="character-type col-sm-6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="character-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
             <button type="button" addflag="flag-chaos" removeflag="flag-order" class="btn btn-primary btn-lg btn-block option">Option B</button>
           </div>
         </div>
 
         <div id="name" class="text-center">
-          <span class="center">Enter name:<br>
+          <h3 class="center">Enter name:</h3>
           <input required class="form-control" type="text" id="username"><br></span>
           <p id="form-error"> </p>
         </div>
@@ -76,8 +80,8 @@
     <!--Scene D  -->
     <div class="scene" id="scene-D">
       <h1 class="customfont" >Scene D</h1>
-      <button type="button" needsflag="has-sandwich" class="player-choice btn-primary btn-lg" value="#scene-E">Jump to scene E</button>
-      <button type="button" canthaveflag="has-sandwich" class="player-choice btn-primary btn-lg" value="#scene-F">Jump to scene F</button>
+      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-E">Jump to scene E</button>
+      <button type="button" canthaveflags="has-sandwich flag-chaos" class="player-choice btn-primary btn-lg" value="#scene-F">Jump to scene F</button>
     </div>
     <!--Scene E  -->
     <div class="scene" id="scene-E">
