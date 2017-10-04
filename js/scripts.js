@@ -41,7 +41,6 @@ $(document).ready(function() {
   }
 
   var canProgress = function() {
-    console.log($("#username").val().length);
     if ($("#username").val().length <= 0) {
       $("#form-error").text("USER_ERROR[ID:32]='NAME INVALID'")
       return false
