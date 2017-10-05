@@ -20,8 +20,8 @@ var player = new Player()
 
 $(document).ready(function() {
 
-  $("button[needsflag]").hide();
-  $("button[needsflags]").hide();
+  $("*[needsflag]").hide();
+  $("*[needsflags]").hide();
 
   var swapWait = false;
   var fadeSwap = function(oldClass, newClass, fadeTime) {
@@ -38,55 +38,15 @@ $(document).ready(function() {
   }
 
   var removeFlag = function(flag) {
+    $("*[needsflag='" + flag + "']").hide();
+    $("*[canthaveflag='" + flag + "']").show();
     player.removeFlag(flag);
-    $("button[needsflag='" + flag + "']").hide();
-    $("button[canthaveflag='" + flag + "']").show();
-    $("button").each(function() {
-      var self = $(this);
-      var cantHaveFlags = self.attr("canthaveflags");
-      var needsFlags = self.attr("needsflags");
-      if (cantHaveFlags) {
-        cantHaveFlags.split(" ").forEach(function(currentFlag) {
-          if (flag === currentFlag) {
-            self.show();
-          }
-        });
-      }
-      if (needsFlags) {
-        needsFlags.split(" ").forEach(function(currentFlag) {
-          if (flag === currentFlag) {
-            self.hide();
-          }
-        });
-      }
-    });
   }
 
   var addFlag = function(flag) {
+    $("*[needsflag='" + flag + "']").show();
+    $("*[canthaveflag='" + flag + "']").hide();
     player.addFlag(flag);
-    $("button[needsflag='" + flag + "']").show();
-    $("button[canthaveflag='" + flag + "']").hide();
-
-    $("button").each(function() {
-      var self = $(this);
-      var cantHaveFlags = self.attr("canthaveflags");
-      var needsFlags = self.attr("needsflags");
-      if (cantHaveFlags) {
-        cantHaveFlags.split(" ").forEach(function(currentFlag) {
-          if (flag === currentFlag) {
-            self.hide();
-          }
-        });
-      }
-      if (needsFlags) {
-        needsFlags.split(" ").forEach(function(currentFlag) {
-          console.log(currentFlag, flag);
-          if (flag === currentFlag) {
-            self.show();
-          }
-        });
-      }
-    });
   }
 
   var updateFlags = function(self) {
