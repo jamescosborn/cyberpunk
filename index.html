@@ -24,7 +24,7 @@
           <footer class="blockquote-footer">Isaac Asimov (1950) <cite title="Source Title">Pebble in the Sky</cite></footer>
         </blockquote> -->
       </br>
-      <p> What does it mean to be alive? Cyberpunk 2099 explores this. On the corner of 6th and Oak a homeless android begs for enough bit coin to buy himself some code. His software is starting to become ridden with malware. Around the corner an enforcer takes down a terminal tom for peddling code. Not only was this tom selling to a non human, but he doesn't even have certification in any of the languages he writes. Hes sloppy. The world is sloppy.  </p>
+      <p> What does it mean to be alive? Cyberpunk 2099 explores this. On the corner of 6th and Oak a homeless android begs for enough bit coin to buy himself some code. His software is starting to become ridden with malware. Around the corner an enforcer takes down a terminal tom for peddling code. Not only was this tom selling to a non human, but he doesn't even have certification in any of the languages he writes. Hes sloppy. The world is sloppy.</p>
       </br>
       <form id="form-character">
         <div class="row">
@@ -32,13 +32,13 @@
             <div class="character-text">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
             </div>
-            <button type="button" addflag="flag-order" removeflag="flag-chaos" class="btn btn-primary btn-lg btn-block option">Option A</button>
+            <button type="button" addflag="flag-order" removeflag="flag-chaos" class="btn btn-primary btn-lg btn-block option" id="chaos">Chaos</button>
           </div>
           <div class="character-type col-sm-6">
             <div class="character-text">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-            <button type="button" addflag="flag-chaos" removeflag="flag-order" class="btn btn-primary btn-lg btn-block option">Option B</button>
+            <button type="button" addflag="flag-chaos" removeflag="flag-order" class="btn btn-danger btn-lg btn-block option">Order</button>
           </div>
         </div>
 
@@ -55,15 +55,21 @@
     <!-- Hidden divs -->
     <!--Scene A  -->
     <div class="scene" id="scene-A">
-      <h1>Scene A</h1>
+      <h1 class="customfont">Click Click MegaCorp, Velvet City(district 42)</h1>
       <div class="textbox">
-        <p>Lorem ipsum <span class="player-name"></span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>You sit alone at your desk and count the minutes. 7:55am,  five minutes before you need to get on the beat.</p>
+        <p>As you start to lean back in your chair and count the ceiling tiles your trapper keeper chimes a developing news alert."Millions fall into coma -Neural Crash- News story developing - "Is your brain potato safe? - news as it develops with MegaCorp News"</p>
+        <p>Your stomach flapjacks as the fear slowly starts to creep in and shake you to the core.</p>
+        <p>This is bad <span class="player-name"></span> your say to yourself.... This is real bad.</p>
+        <p>The neural link aka "the brain potato" is arguably the most important innovation of the 20th century. No longer is nature the gatekeeper to untapped potential.</p>
+        <p>The brain potato levels the playing field. It allows users to access, store, and recall  any data type instantaneously. Rich, poor,young, old…. everyone has one these days. Most implanted directly after birth.</p>
+        <p>You can’t help but wonder… Will you be safe?</p>
+        <p>"Time to begin work <span class="player-name"></span>!" the trapper keeper chimes as the clock read 8am.</p>
+        <p>“Same stuff… different day” you mutter to yourself. The last thing you want to do is spend all day writing full pieces. All you can think about is the event the Journalists are calling  “The Crash”
+        You you reach for your trapper keeper to get started for the day.. When you have a thought… maybe I should reach out to some contacts… see if I can learn more about the crash.</p>
       </div>
-      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-B">You don't think you should worry about the incident.</button>
-      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-C">You suspect there's more too the incident than what's being let on.</button>
-      <!-- <button type="button" class="btn-primary btn-lg" ata-container="body" data-toggle="popover" data-placement="right" data-content="THING1">Stay at home</button> -->
+      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-B">Focus on work</button>
+      <button type="button" addflag="has-sandwich"  class="player-choice btn-primary btn-lg" value="#scene-C">Send message to Contact: Zephyr</button>
     </div>
     <!--Scene B  -->
     <div class="scene" id="scene-B">
@@ -76,20 +82,42 @@
     </div>
     <!--Scene C  -->
     <div class="scene" id="scene-C">
-      <h1 class="customfont">Scene C</h1>
+      <h1 class="customfont" >Westwood Park - 6 p.m.</h1>
+      <div class="textbox">
+        <p>The Crash is still in your mind; you can’t stop thinking about it. You go to Westwood Park to try to relax, but the old, dying trees and tainted sunlight give you no comfort. People mill by at a listless pace, gas masks over their faces.</p>
+        <p>Why did all those people crash? Is it going to happen again, or to <i>you</i>? You feel sick, uneasy, like you have to get to the bottom of this. One of your old chummers from academy might know. You heard he’d got a pretty nice gig with SCorp as an ICE controller. The park is now deserted, and seems sad, haunted. You stomp at a rat that scurries by your feet.</p>
+        <p>Ehh, it’s worth a shot. You call up Zephyr Dionikes on your vidphone.</p>
+        <p>“<span class="player-name"></span>, what’s going down?”</p>
+        <p>“Hey, Zephyr. You know anything about the Crash? I can’t stop thinking about it,” you say.</p>
+        <p>Zephyr stays silent for a few minutes. “<span class="player-name"></span>, don’t look too close. <p>That’s my advice. Go to your job tomorrow, try to be happy, find a date this weekend.”</p>
+        <p>“Zeph, tell me. I need to know. What happened?”</p>
+        <p>He takes a moment to rub his furrowed brow. <span class="kowabunga">ENCRYPTED</span> flashed onto the screen. “Fine, you asked for it. Look into Dot Corp.” The line disconnects... He looked really concerned. It’s been a long day. Whatever Zeph pointed me towards, it’s probably not good. Time to get back home. As you walk, you see someone down and out slumped next to a tree.</p>
+      </div>
       <button type="button" class="player-choice btn-primary btn-lg" value="#scene-D">Head to your apartment.</button>
       <!-- <button type="button" class="btn-primary btn-lg" ata-container="body" data-toggle="popover" data-placement="right" data-content="FAKE BUTTON">Stay at home</button> -->
-    </div>
+      <h1 class="customfont">Scene C</h1>    </div>
     <!--Scene D  -->
     <div class="scene" id="scene-D">
       <h1 class="customfont" >Scene D</h1>
-      <button addflag="info-kept" type="button" class="player-choice btn-primary btn-lg" value="#scene-E">Keep the Data from the Watcher.</button>
-      <button addflag="info-given" type="button" class="player-choice btn-primary btn-lg" value="#scene-F">Share the Data with the Watcher.</button>
+      <div class="textbox">
+        <p>You try and focus on anything EXCEPT for the tip you just learned, but you can’t seem to push it out of you mind. What had him so worked up? Is there something nefarious related to “the crash”.</p>
+        <p>“DING FLOOR 200!” the mag lift announces. </p>
+        <p>You step into the desolate hall of your apartment floor and make your way to door 200e2. The room is nearly empty save a bed, a nightstand, and a vintage felix the cat alarm clock. The techno greasy glow of the magenta city scape illuminates cold room. You take a moment and finally decide that you need to know what is being hidden from the public about “The Crash”.</p>
+        <p>You set the brain potato to twice stuffed and frame jack into the Dot MegaCorp repositories. You execute a bit of custom script and find something funny. An error in the commit log for the latest neural link software update. It looks like something is being covered up. You dig deeper into the problem, only to discover the horrifying truth…</p>
+        <p>A bug. A nasty one. And even worse MegaCorp knew it was going to happen, and they did nothing to stop it.</p>
+        <p>This could be the end of MegaCorp if anyone finds out…</p>
+        <p>"You have a new message, <span class="kowabunga"></span>.</p>
+        <p>From an anonymous journalist… “You have the information I need. Help me change the world”</p>
+      </div>
+      <button addflag="info-kept" type="button" class="player-choice btn-primary btn-lg" value="#scene-E">Send information</button>
+      <button addflag="info-given" type="button" class="player-choice btn-primary btn-lg" value="#scene-F">Don’t send information</button>
     </div>
     <!--Scene E  -->
     <div class="scene" id="scene-E">
       <h1 class="customfont" >Scene E</h1>
+      <p>It seems as though you can't escape the wrath of SCorp as you are being chased through a network of alleys, trying to evade the omnipresence of wires devouring the cityscape.  As you extricate yourself from the electric brine with your laser blade, a journalist pulls you in from a side door of a store front. Had the syndicate already gotten to you? No, it was a local journalist. You and the journalist flee into the nefarious neon underground away from harm above ground, for now....</p>
       <button type="button" class="player-choice btn-primary btn-lg" value="#scene-G">Continue</button>
+      <!-- <button type="button" class="btn-primary btn-lg" ata-container="body" data-toggle="popover" data-placement="right" data-content="fake button">Stay at home</button> -->
     </div>
     <!--Scene F  -->
     <div class="scene" id="scene-F">
@@ -105,12 +133,27 @@
     <!--Ending 1  -->
     <div class="scene" id="ending-A">
       <h1 class="customfont" >Ending 1</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Something perturbs you. You realize you have seen this journalist before . It seems as if you crossed paths at a local seafood restaurant. He was in a bathroom stall and abruptly left with a viscous terrier under his arm while you were washing your hands.  His lack of hygiene offended you immensely.  But what happened after that was much worse. You witnessed him meticulously licking his fingers while eating lobster. The act flayed all your senses.  So you made the decision to turn him in.</p>
+      <button type="button" class="player-choice btn-primary btn-lg">Buttons That do random things</button>
+      <button type="button" class="player-choice btn-primary btn-lg">Buttons That do random things</button>
     </div>
     <!--Ending 2  -->
     <div class="scene" id="ending-B">
-      <h1 class="customfont" >Ending 2</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h1 class="customfont">Watchers HQ -- 8 a.m.</h1>
+      <div class="textbox">
+      <p>A few days later you awake at the Watchers pad to the sound of helicopters overhead. This is bad. Really bad. SCorp is on to you. They must have found out it was the Watchers that leaked the info. You check the Watcher newsfeed. <div class="blockquote"><strong>Crash caused by Dot Corp, covered by SCorp</strong><footer class="blockquote-footer">58 million views.</footer></div></p>
+      <p>It’s fight or flight time. Live or die. You climb out the window onto the rickety fire escape and shimmy your way down to your ‘85 Wizzer parked on the street below.</p>
+      <p>Finally you get it started, and take off at speed. Your heart is pounding; you’ve never felt like this before. Is it the end?</p>
+      <p>All of the sudden, two black SUVs pull up and block the intersection. Panic races through your body. You turn the bike around and attempt to go the other way, but 4 other SUVs pull up to block the opposite side of the street. The jig is up. You’re geeked.</p>
+      <p>You dismount your bike, take off your helmet, and stare down your oppressors.
+      Androids in black suits begin piling out of the vehicles. How do so many fit inside?</p>
+      <p>“People deserve to know!” you shout, “We’re awake now!”</p>
+      <p>They form a circle surrounding you. There must be 100… They stand alert, silent.</p>
+      <p>Was it worth it? This is what humanity needed to expose SCorp, you tell yourself. Millions of brains wiped by a blank master copy in the blink of an eye. For what? The potatoes made life better, but now...</p>
+      <p>Whatever happens to you, you feel like the world is entering a strange, new age, and that you and the other Watchers were the ushers to this great transformation.</p>
+      </div>
+      <button type="button" class="player-choice btn-primary btn-lg">Buttons That do random things</button>
+      <button type="button" class="player-choice btn-primary btn-lg">Buttons That do random things</button>
     </div>
   </div>
   </body>

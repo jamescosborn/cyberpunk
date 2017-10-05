@@ -14,6 +14,10 @@ body {
   background-color: var(--col-bg);
 }
 
+.kowabunga {
+  color: red;
+}
+
 /*Override Bootstrap form colors*/
 .form-control {
   color: var(--col-1);
@@ -120,4 +124,10 @@ body {
   outline-color: white;
   font-size: 150%;
   font-weight: bold;
+}
+
+/*makes chaos button red on character creation page*/
+
+#chaos {
+  background-color: red;
 }
