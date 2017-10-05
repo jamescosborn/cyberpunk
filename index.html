@@ -58,15 +58,15 @@
       <h1 class="customfont">Click Click MegaCorp, Velvet City(district 42)</h1>
       <div class="textbox">
         <p>You sit alone at your desk and count the minutes. 7:55am,  five minutes before you need to get on the beat.</p>
-        <p>As you start to lean back in your chair and count the ceiling tiles your trapper keeper chimes a developing news alert."Millions fall into coma -Neural Crash- News story developing - "Is your brain potato safe? - news as it develops with MegaCorp News"</p>
+        <p>As you start to lean back in your chair and count the ceiling tiles your trapper keeper chimes a developing news alert. <div class="blockquote"><strong>Millions fall into coma -Neural Crash- News story developing - Is your brain potato safe?</strong><footer class="blockquote-footer">News at 5</footer></div></p>
         <p>Your stomach flapjacks as the fear slowly starts to creep in and shake you to the core.</p>
-        <p>This is bad <span class="player-name"></span> your say to yourself.... This is real bad.</p>
+        <p>This is bad <span class="player-name"></span>, you say to yourself... This is real bad.</p>
         <p>The neural link aka "the brain potato" is arguably the most important innovation of the 20th century. No longer is nature the gatekeeper to untapped potential.</p>
         <p>The brain potato levels the playing field. It allows users to access, store, and recall  any data type instantaneously. Rich, poor,young, old…. everyone has one these days. Most implanted directly after birth.</p>
         <p>You can’t help but wonder… Will you be safe?</p>
         <p>"Time to begin work <span class="player-name"></span>!" the trapper keeper chimes as the clock read 8am.</p>
-        <p>“Same stuff… different day” you mutter to yourself. The last thing you want to do is spend all day writing full pieces. All you can think about is the event the Journalists are calling  “The Crash”
-        You you reach for your trapper keeper to get started for the day.. When you have a thought… maybe I should reach out to some contacts… see if I can learn more about the crash.</p>
+        <p>“Same stuff… different day” you mutter to yourself. The last thing you want to do is spend all day writing full pieces. All you can think about is the event the Journalists are calling “The Crash”
+        You reach for your trapper keeper to get started for the day.. When you have a thought… maybe I should reach out to some contacts… see if I can learn more about the crash.</p>
       </div>
       <button type="button" class="player-choice btn-primary btn-lg" value="#scene-B">Focus on work</button>
       <button type="button" addflag="has-sandwich"  class="player-choice btn-primary btn-lg" value="#scene-C">Send message to Contact: Zephyr</button>
@@ -115,9 +115,13 @@
     <!--Scene E  -->
     <div class="scene" id="scene-E">
       <h1 class="customfont" >Scene E</h1>
-      <p>It seems as though you can't escape the wrath of SCorp as you are being chased through a network of alleys, trying to evade the omnipresence of wires devouring the cityscape.  As you extricate yourself from the electric brine with your laser blade, a journalist pulls you in from a side door of a store front. Had the syndicate already gotten to you? No, it was a local journalist. You and the journalist flee into the nefarious neon underground away from harm above ground, for now....</p>
-      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-G">Continue</button>
-      <!-- <button type="button" class="btn-primary btn-lg" ata-container="body" data-toggle="popover" data-placement="right" data-content="fake button">Stay at home</button> -->
+      <div class="textbox">
+        <p>It seems as though you can't escape the wrath of SCorp as you are being chased through a network of alleys, trying to evade the omnipresence of wires devouring the cityscape.</p>
+        <p>As you extricate yourself from the electric brine with your laser blade, a journalist pulls you in from a side door of a store front. Had the syndicate already gotten to you?</p>
+        <p>No, it was a local journalist. You and the journalist flee into the nefarious neon underground, away from harm above ground, for now...</p>
+      </div>
+      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-G">Jump to scene G</button>
+      <button type="button" class="btn-primary btn-lg" ata-container="body" data-toggle="popover" data-placement="right" data-content="fake button">Stay at home</button>
     </div>
     <!--Scene F  -->
     <div class="scene" id="scene-F">
@@ -127,12 +131,11 @@
     <!--Scene G  -->
     <div class="scene" id="scene-G">
       <h1 class="customfont" >Scene G</h1>
-      <button canthaveflag="info-given" needsflag="info-kept" type="button" class="player-choice btn-primary btn-lg"  value="#ending-A">You turn him in.</button>
-      <button canthaveflag="info-kept" needsflag="info-given" type="button" class="player-choice btn-primary btn-lg"  value="#ending-B">You Expose the truth.</button>
     </div>
     <!--Ending 1  -->
     <div class="scene" id="ending-A">
       <h1 class="customfont" >Ending 1</h1>
+      <div class="textbox">
       <p>Something perturbs you. You realize you have seen this journalist before . It seems as if you crossed paths at a local seafood restaurant. He was in a bathroom stall and abruptly left with a viscous terrier under his arm while you were washing your hands.  His lack of hygiene offended you immensely.  But what happened after that was much worse. You witnessed him meticulously licking his fingers while eating lobster. The act flayed all your senses.  So you made the decision to turn him in.</p>
       <button type="button" class="player-choice btn-primary btn-lg">Buttons That do random things</button>
       <button type="button" class="player-choice btn-primary btn-lg">Buttons That do random things</button>
