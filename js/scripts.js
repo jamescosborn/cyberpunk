@@ -24,6 +24,7 @@ $(document).ready(function() {
   $("*[needsflags]").hide();
 
   var swapWait = false;
+  //old class - current scene, new class - New Scene
   var fadeSwap = function(oldClass, newClass, fadeTime) {
     if (swapWait) {
       return false;
@@ -87,7 +88,7 @@ $(document).ready(function() {
     if (!canProgress()) {
       return false;
     }
-    var self = $(this)
+    var self = $(this) // this controls specifically the clicked button
     var targetClass = self.val();
     updateFlags(self);
     fadeSwap(".scene", targetClass, 1000);
@@ -102,7 +103,7 @@ $(document).ready(function() {
   });
 
 
-  var introfade = 150;
+  var introfade = 1500;
 
   $("#intro-quote").fadeIn(introfade*2);
 
