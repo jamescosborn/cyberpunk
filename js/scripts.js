@@ -1,25 +1,44 @@
-$(document).ready(function() {
+function Player() {
+  this.flags = [];
+}
 
-  var flags = [];
+Player.prototype.addFlag = function(flag) {
+  this.flags.push(flag);
+};
+
+Player.prototype.removeFlag = function(flag) {
+  for (i = 0; i < this.flags.length; i++) {
+    if (this.flags[i] == flag) {
+      this.flags.slice(i, 1);
+      break
+    }
+  }
+};
+
+
+var player = new Player()
+
+$(document).ready(function() {
 
   $("button[needsflag]").hide();
   $("button[needsflags]").hide();
 
+  var swapWait = false;
   var fadeSwap = function(oldClass, newClass, fadeTime) {
+    if (swapWait) {
+      return false;
+    }
+    swapWait = true;
     $(oldClass).fadeOut(fadeTime);
     $(".popover").fadeOut(fadeTime);
     setTimeout(function(){
       $(newClass).fadeIn(fadeTime)
+      swapWait = false;
     }, fadeTime);
   }
 
   var removeFlag = function(flag) {
-    for (i = 0; i < flags.length; i++) {
-      if (flags[i] == flag) {
-        flags.slice(i, 1);
-        break
-      }
-    }
+    player.removeFlag(flag);
     $("button[needsflag='" + flag + "']").hide();
     $("button[canthaveflag='" + flag + "']").show();
     $("button").each(function() {
@@ -44,7 +63,7 @@ $(document).ready(function() {
   }
 
   var addFlag = function(flag) {
-    flags.push(flag);
+    player.addFlag(flag);
     $("button[needsflag='" + flag + "']").show();
     $("button[canthaveflag='" + flag + "']").hide();
 
@@ -89,7 +108,7 @@ $(document).ready(function() {
     } else if (nameLength > 40) {
       $("#form-error").text("USER_ERROR[ID:32]='NAME TOO LONG'");
       return false
-    } else if ( !(flags.includes("flag-order") || flags.includes("flag-chaos")) ) {
+    } else if ( !(player.flags.includes("flag-order") || player.flags.includes("flag-chaos")) ) {
       $("#form-error").text("USER_ERROR[ID:41]='PATH INVALID'");
       return false
     }
@@ -111,7 +130,7 @@ $(document).ready(function() {
     var self = $(this)
     var targetClass = self.val();
     updateFlags(self);
-    fadeSwap(".scene", targetClass, 2000);
+    fadeSwap(".scene", targetClass, 1000);
   })
 
   $(".option").click(function(){
