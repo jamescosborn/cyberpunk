@@ -14,6 +14,10 @@ body {
   background-color: var(--col-bg);
 }
 
+.kowabunga {
+  color: red;
+}
+
 /*Override Bootstrap form colors*/
 .form-control {
   color: var(--col-1);
