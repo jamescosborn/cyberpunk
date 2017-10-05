@@ -18,11 +18,7 @@
       </blockquote>
       <div class="scene" id="scene-character-creator">
         <img class="default" src="img/punk.jpg">
-        </br>
-        <!-- <blockquote class="blockquote">
-          <p class="mb-0">There never can be a man so lost as one who is lost in the vast and intricate corridors of his own lonely mind, where none may reach and none may save.</p>
-          <footer class="blockquote-footer">Isaac Asimov (1950) <cite title="Source Title">Pebble in the Sky</cite></footer>
-        </blockquote> -->
+
       </br>
       <p> What does it mean to be human? How do we decide which path to take along the journey of our lives? On the streets of Velvet City a homeless android begs for enough bit coin to buy himself some code.  Around the corner a SCorp enforcer takes down a Terminal Tom for peddling illegal code. The city is full of stories.... this is yours.</p>
       </br>
@@ -30,13 +26,13 @@
         <div class="row">
           <div class="character-type col-sm-6">
             <div class="character-text">
-              <p>You believe that nothing stays gold. The confused, unorganized state of primordial matter amuses you. Creation and destruction are part of the natural order. The world is a can full of gas. You’ve got a hand full of matches.</p>
+              <p><i>You believe that nothing stays gold. The confused, unorganized state of primordial matter amuses you. Creation and destruction are part of the natural order. The world is a can full of gas. You’ve got a hand full of matches.</i></p>
             </div>
             <button type="button" addflag="flag-order" removeflag="flag-chaos" class="btn btn-primary btn-lg btn-block option" id="chaos">Chaos</button>
           </div>
           <div class="character-type col-sm-6">
             <div class="character-text">
-              <p>You believe everything has a place and purpose. The pattern, structure, and repetition of everyday life make you feel safe. The world can be a scary place, so you follow the rules.</p>
+              <p><i>You believe everything has a place and purpose. The pattern, structure, and repetition of everyday life make you feel safe. The world can be a scary place, so you follow the rules.</i></p>
             </div>
             <button type="button" addflag="flag-chaos" removeflag="flag-order" class="btn btn-danger btn-lg btn-block option">Order</button>
           </div>
@@ -55,7 +51,7 @@
     <!-- Hidden divs -->
     <!--Scene A  -->
     <div class="scene" id="scene-A">
-      <h1 class="customfont">ECorp, Velvet City (district 42)</h1>
+      <h1 class="customfont">SCorp News Room, Velvet City (district 42)</h1>
       <div class="textbox">
         <p>You sit alone at your desk and count the minutes. 7:55am,  five minutes before you need to get on the beat.</p>
         <p>As you start to lean back in your chair and count the ceiling tiles, your trapper keeper chimes a developing news alert. <div class="blockquote"><strong>"Neural Crash causes millions to fall into coma - Is your brain potato safe?"</strong><footer class="blockquote-footer">5 million views</footer></div></p>
@@ -98,7 +94,7 @@
       <!-- <button type="button" class="btn-primary btn-lg" ata-container="body" data-toggle="popover" data-placement="right" data-content="FAKE BUTTON">Stay at home</button> -->
     <!--Scene D  -->
     <div class="scene" id="scene-D">
-      <h1 class="customfont" >Scene D</h1>
+      <h1 class="customfont" >Your Apartment - Rose Building</h1>
       <div class="textbox">
         <p>You try and focus on anything EXCEPT for the tip you just learned, but you can’t seem to push it out of you mind. What had him so worked up? Is there something nefarious related to “The Crash”.</p>
         <p>“DING FLOOR 200!” the mag lift announces. </p>
@@ -114,7 +110,7 @@
     </div>
     <!--Scene E  -->
     <div class="scene" id="scene-E">
-      <h1 class="customfont" >Scene E</h1>
+      <h1 class="customfont" >Escape SCorp News</h1>
       <div class="textbox">
         <p>You decide not to send the information, you have no idea who this person is, or even if they can be trusted.</p>
         <p>The mag lift dings open and a group of heavily armed SCorp enforcers step out.</p>
@@ -123,14 +119,14 @@
         <p><i>"Oh no... SCorp has me now"</i> you think.
         <p> You and the journalist flee into the nefarious neon underground, away from harm above, for now...</p>
       </div>
-      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-G">Jump to scene G -Journalist Hideout</button>
+      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-G">Journalist Hideout</button>
       <button type="button" class="btn-primary btn-lg" ata-container="body" data-toggle="popover" data-placement="right" data-content="Maybe you should stay put... you're kinda out of breath at this point">Keep Running</button>
     </div>
     <!--Scene F  -->
     <div class="scene" id="scene-F">
-      <h1 class="customfont" >Scene F</h1>
+      <h1 class="customfont" >Your Apartment</h1>
       <div class="textbox">
-        <p>You create an encrypted data packet  to send to your new contact. This wasn’t an easy choice, but the world deserves to know the truth. The moment the information is sent
+        <p>You create an encrypted data packet to send to your new contact. This wasn’t an easy choice, but the world deserves to know the truth. The moment the information is sent
         a security alarm screams into your ear, <i>“Security channel compromised”.</i></p>
 
         <p><i>“Oh shit”</i>  you whisper…</p>
@@ -145,27 +141,39 @@
         Where can you go? Who can you trust?
         You send you journalist contact a message <i>“Help, SCorp is on my tail”</i></p>
 
-        <p><i>“Ditch the heat and meet in The Velvet Underground. Block E, 5th avenue access hatch. Pass  code is xeon”</i></p>
+        <p><i>“Ditch the heat and meet me in The Velvet Underground. Block E, 5th avenue access hatch. Pass  code is xeon”</i></p>
       </div>
-      <button type="button" class="player-choice btn-primary btn-lg"  value="#scene-G">Continue</button>
+      <button type="button" class="player-choice btn-primary btn-lg"  value="#scene-G">Meet the Journalist</button>
 
     </div>
     <!--Scene G  -->
     <div class="scene" id="scene-G">
       <h1 class="customfont" >Scene G</h1>
       <div class="textbox">
-        <button needsflag="info-kept" type="button" class="player-choice btn-primary btn-lg" value="#scene-G">Turn him in.</button>
-        <button needsflag="info-given" type="button" class="player-choice btn-primary btn-lg" value="#scene-G">Expose the truth with him.</button>
+        <p>In the early 21st century Velvet City was a major port located on a bustling waterway. By 2099 the river had been diverted to serve other SCorp interests. The dried up canals became The Velvet Underground. A haven for people looking to get lost.</p>
+
+        <p>You arrive at Block E, 5th avenue access hatch and key in the code <i>“xeon”.</i></p>
+
+        <p>You step into the small dimly lit room.</p>
+
+        <p><i>“We need to talk”</i> you say to the journalist.</p>
+
+        <p><i>“Then talk”</i> he replies.</p>
+
+        <p>You two discuss the need for a new world order. You both agree that news that SCorp intentionally released faulty software and needs to be held accountable. Yet, you fear that the panic incited could cause a global panic. While the journalist seems intent on setting the world ablaze… you still have pause. Do you and the journalist expose the truth?</p>
+        <p>Or maybe it’s not too late to make nice with SCorp.</p>
       </div>
+        <button needsflag="info-kept" type="button" class="player-choice btn-primary btn-lg" value="#ending-A">Turn him in.</button>
+        <button needsflag="info-given" type="button" class="player-choice btn-primary btn-lg" value="#ending-B">Expose the truth with him.</button>
+
     </div>
     <!--Ending 1  -->
     <div class="scene" id="ending-A">
       <h1 class="customfont" >Ending 1</h1>
       <div class="textbox">
       <p>Something perturbs you. You realize you have seen this journalist before . It seems as if you crossed paths at a local seafood restaurant. He was in a bathroom stall and abruptly left with a viscous terrier under his arm while you were washing your hands.  His lack of hygiene offended you immensely.  But what happened after that was much worse. You witnessed him meticulously licking his fingers while eating lobster. The act flayed all your senses.  So you made the decision to turn him in.</p>
+      <h4>The End?</h4>
       </div>
-      <button type="button" class="player-choice btn-primary btn-lg">Buttons That do random things</button>
-      <button type="button" class="player-choice btn-primary btn-lg">Buttons That do random things</button>
     </div>
     <!--Ending 2  -->
     <div class="scene" id="ending-B">
@@ -181,9 +189,8 @@
       <p>They form a circle surrounding you. There must be 100… They stand alert, silent.</p>
       <p>Was it worth it? This is what humanity needed to expose SCorp, you tell yourself. Millions of brains wiped by a blank master copy in the blink of an eye. For what? The potatoes made life better, but now...</p>
       <p>Whatever happens to you, you feel like the world is entering a strange, new age, and that you and the other Watchers were the ushers to this great transformation.</p>
+      <h4>The End?</h4>
       </div>
-      <button type="button" class="player-choice btn-primary btn-lg">Buttons That do random things</button>
-      <button type="button" class="player-choice btn-primary btn-lg">Buttons That do random things</button>
     </div>
   </div>
   </body>
