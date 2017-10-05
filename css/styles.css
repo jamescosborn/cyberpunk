@@ -54,7 +54,7 @@ body {
   display: none;
   border-style: solid;
   padding: 50px;
-  min-height: 950px;
+  min-height: 100%;
   margin-top: 70px;
   background-color: var(--col-bg3);
   border-color: var(--col-1));
@@ -63,7 +63,7 @@ body {
 
 .textbox {
   border-top: 1px solid;
-  min-height: 850px;
+  min-height: 90%;
   margin-top: 25px;
   padding-top: 25px;
 }

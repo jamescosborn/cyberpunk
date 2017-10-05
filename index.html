@@ -70,13 +70,15 @@
       </div>
       <button type="button" class="player-choice btn-primary btn-lg" value="#scene-B">Focus on work</button>
       <button type="button" addflag="has-sandwich"  class="player-choice btn-primary btn-lg" value="#scene-C">Send message to Contact: Zephyr</button>
-      <button type="button" needsflag="flag-chaos" class="btn-primary btn-lg" ata-container="body" data-toggle="popover" data-placement="right" data-content="THING1">Stay at home</button>
     </div>
     <!--Scene B  -->
     <div class="scene" id="scene-B">
-      <h1 class="customfont" >Scene B</h1>
-      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-D">Jump to scene D</button>
-      <button type="button" class="btn-primary btn-lg" ata-container="body" data-toggle="popover2" data-placement="right" data-content="You really need to meet Jam @ the Jealous Englishman">FAKE OPTION</button>
+      <h1 class="customfont">The Grisly Grotto</h1>
+      <div class="textbox">
+        <p>you don’t want to get involved with something like that. If it was important, your boss would of been making as much of a deal out of it as the CyberBall playoffs he had you working on last week. Still, you can’t shake the feeling that there was more too it than what SCorp was playing it off as, thousands of people shouldn’t just shut off like that.</p>
+        <p>You decide it would be better if you just forgot about all of it at the bottom of a drink, so after clocking out and putting on your jacket, you get on your hoverbike and head straight for the bar. The bar you frequent, the Grisly Grotto, is a sort of classy joint. Music from long before the Restructuring echoes through the room, giving the place a very nostalgic vibe</p>
+      </div>
+      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-D">Head to your apartment.</button>
     </div>
     <!--Scene C  -->
     <div class="scene" id="scene-C">
@@ -91,9 +93,9 @@
         <p>“Zeph, tell me. I need to know. What happened?”</p>
         <p>He takes a moment to rub his furrowed brow. <span class="kowabunga">ENCRYPTED</span> flashed onto the screen. “Fine, you asked for it. Look into Dot Corp.” The line disconnects... He looked really concerned. It’s been a long day. Whatever Zeph pointed me towards, it’s probably not good. Time to get back home. As you walk, you see someone down and out slumped next to a tree.</p>
       </div>
-      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-D">Jump to scene D</button>
-      <button type="button" class="btn-primary btn-lg" ata-container="body" data-toggle="popover" data-placement="right" data-content="FAKE BUTTON">Stay at home</button>
-    </div>
+      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-D">Head to your apartment.</button>
+      <!-- <button type="button" class="btn-primary btn-lg" ata-container="body" data-toggle="popover" data-placement="right" data-content="FAKE BUTTON">Stay at home</button> -->
+      <h1 class="customfont">Scene C</h1>    </div>
     <!--Scene D  -->
     <div class="scene" id="scene-D">
       <h1 class="customfont" >Scene D</h1>
@@ -107,27 +109,26 @@
         <p>"You have a new message, <span class="kowabunga"></span>.</p>
         <p>From an anonymous journalist… “You have the information I need. Help me change the world”</p>
       </div>
-      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-E">Send information</button>
-      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-F">Don’t send information</button>
+      <button addflag="info-kept" type="button" class="player-choice btn-primary btn-lg" value="#scene-E">Send information</button>
+      <button addflag="info-given" type="button" class="player-choice btn-primary btn-lg" value="#scene-F">Don’t send information</button>
     </div>
     <!--Scene E  -->
     <div class="scene" id="scene-E">
       <h1 class="customfont" >Scene E</h1>
       <p>It seems as though you can't escape the wrath of SCorp as you are being chased through a network of alleys, trying to evade the omnipresence of wires devouring the cityscape.  As you extricate yourself from the electric brine with your laser blade, a journalist pulls you in from a side door of a store front. Had the syndicate already gotten to you? No, it was a local journalist. You and the journalist flee into the nefarious neon underground away from harm above ground, for now....</p>
-      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-G">Jump to scene G</button>
-      <button type="button" class="btn-primary btn-lg" ata-container="body" data-toggle="popover" data-placement="right" data-content="fake button">Stay at home</button>
+      <button type="button" class="player-choice btn-primary btn-lg" value="#scene-G">Continue</button>
+      <!-- <button type="button" class="btn-primary btn-lg" ata-container="body" data-toggle="popover" data-placement="right" data-content="fake button">Stay at home</button> -->
     </div>
     <!--Scene F  -->
     <div class="scene" id="scene-F">
       <h1 class="customfont" >Scene F</h1>
-      <button type="button" class="player-choice btn-primary btn-lg"  value="#scene-G">Jump to scene G</button>
-      <button type="button" class="btn-primary btn-lg" ata-container="body" data-toggle="popover" data-placement="right" data-content="Fake button">Stay at home</button>
+      <button type="button" class="player-choice btn-primary btn-lg"  value="#scene-G">Continue</button>
     </div>
     <!--Scene G  -->
     <div class="scene" id="scene-G">
       <h1 class="customfont" >Scene G</h1>
-      <button type="button" class="player-choice btn-primary btn-lg"  value="#ending-A">Jump to ending 1</button>
-      <button type="button" class="player-choice btn-primary btn-lg"  value="#ending-B">Jump to ending 2</button>
+      <button canthaveflag="info-given" needsflag="info-kept" type="button" class="player-choice btn-primary btn-lg"  value="#ending-A">You turn him in.</button>
+      <button canthaveflag="info-kept" needsflag="info-given" type="button" class="player-choice btn-primary btn-lg"  value="#ending-B">You Expose the truth.</button>
     </div>
     <!--Ending 1  -->
     <div class="scene" id="ending-A">
